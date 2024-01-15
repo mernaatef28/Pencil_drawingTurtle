@@ -4,7 +4,9 @@ pen = tu.Turtle()
 pen.speed(5)
 
 
-def draw_fn(file,thickness = 1,co = (0.5,0.5,0.5)):
+def draw_fn(file,col):
+    thickness = 1
+    co = (0.5,0.5,0.5)
     pen.color(co)
     pen.width(thickness)
     data = open(f'{file}.txt','r')
@@ -18,10 +20,13 @@ def draw_fn(file,thickness = 1,co = (0.5,0.5,0.5)):
             pen.goto(x-300,(y*-1)+300)
             f= 0
             pen.pendown()
+            pen.fillcolor(col)
+            pen.begin_fill()
         else:
             pen.goto(x-300,(y*-1)+300)
-
-draw_fn('face')
+    pen.end_fill()
+    
+draw_fn('output', '#f1c27d')
 
 
 
