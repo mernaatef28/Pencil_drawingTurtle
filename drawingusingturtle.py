@@ -1,5 +1,4 @@
 import turtle as tu
-
 pen = tu.Turtle()
 pen.speed(5)
 
@@ -26,8 +25,7 @@ def draw_fn(file,col):
             pen.goto(x-300,(y*-1)+300)
     pen.end_fill()
     
-draw_fn('output', '#f1c27d')
-
+draw_fn('cap', 'brown')
 
 
 tu.done()
